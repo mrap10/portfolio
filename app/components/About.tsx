@@ -5,6 +5,18 @@ import ImagePortal from "@/components/ui/image-portal";
 import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 
 export default function About() {
+    const handleGithubClick = () => {
+        window.open('https://github.com/mrap10', '_blank', 'noopener,noreferrer');
+    };
+
+    const handleLinkedinClick = () => {
+        window.open('https://www.linkedin.com/in/abhipanthi', '_blank', 'noopener,noreferrer');
+    };
+
+    const handlePortfolioClick = () => {
+        window.open('https://touchtypepro.vercel.app/', '_blank', 'noopener,noreferrer');
+    };
+
     return (
         <div className="min-h-screen bg-black text-white pt-20 px-4">
             <div className="max-w-6xl mx-auto md:flex md:flex-col items-center justify-center space-y-7">
@@ -45,12 +57,23 @@ export default function About() {
                                 <p className="flex items-center gap-2">
                                     <Mail className="text-red-500 w-4 h-4" /> contact.abhii10@gmail.com
                                 </p>
-                                <p className="flex items-center gap-2 hover:underline cursor-pointer">abhi.codes <ArrowUpRight className="text-blue-500 w-4 h-4" /></p>
+                                <p 
+                                    onClick={handlePortfolioClick}
+                                    className="flex items-center gap-2 hover:underline cursor-pointer hover:text-blue-400 transition-colors duration-300"
+                                >
+                                    abhi.codes <ArrowUpRight className="text-blue-500 w-4 h-4" />
+                                </p>
                                 <div className="flex justify-between items-center gap-5">
-                                    <button className="rounded-full border border-neutral-600 hover:border-white p-2 mt-2 flex items-center justify-center gap-2 cursor-pointer">
+                                    <button 
+                                        onClick={handleGithubClick}
+                                        className="rounded-full border border-neutral-600 hover:border-white hover:bg-neutral-800 p-2 mt-2 flex items-center justify-center gap-2 cursor-pointer transition-all duration-300 hover:scale-110"
+                                    >
                                         <Github className="w-5 h-5" />
                                     </button>
-                                    <button className="rounded-full border border-neutral-600 hover:border-white p-2 mt-2 flex items-center justify-center gap-2 cursor-pointer">
+                                    <button 
+                                        onClick={handleLinkedinClick}
+                                        className="rounded-full border border-neutral-600 hover:border-blue-500 hover:bg-blue-500/10 p-2 mt-2 flex items-center justify-center gap-2 cursor-pointer transition-all duration-300 hover:scale-110"
+                                    >
                                         <Linkedin className="w-5 h-5" />
                                     </button>
                                 </div>

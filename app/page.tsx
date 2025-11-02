@@ -1,6 +1,7 @@
 import About from "./components/About";
 import GithubStats from "./components/GithubStats";
 import Hero from "./components/Hero";
+import Projects from "./components/Projects";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <About />
       <GithubStats />
+      <Projects />
     </div>
   );
 }
