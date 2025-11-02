@@ -38,24 +38,26 @@ export default function GithubStats() {
 		return <div className="text-red-400 text-center py-8">Error: {error}</div>;
 
 	return (
-		<div className="pt-15 px-4 bg-black text-white max-w-6xl mx-auto">
+		<div className="pt-10 px-4 bg-black text-white max-w-6xl mx-auto">
 			<div className="flex flex-col items-center justify-center gap-5">
 				<h1 className="font-bold text-3xl">Github Contributions</h1>
-				<div className="overflow-x-auto">
+				<div className="border border-neutral-700 rounded-lg p-6 bg-neutral-900/50 backdrop-blur-sm">
 					<ActivityCalendar
 						data={data}
 						theme={{
 							light: ["#ebedf0", "#c6e48b", "#7bc96f", "#239a3b", "#196127"],
-							dark: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
+							dark: ["#374151", "#10b981", "#059669", "#047857", "#065f46"],
 						}}
 						labels={{
 							legend: { less: "Less", more: "More" },
+							totalCount: "{{count}} contributions since July",
 						}}
 						showWeekdayLabels
 						blockSize={12}
 						fontSize={14}
+						colorScheme="dark"
 					/>
-					<p className="text-right text-neutral-500 mt-3">Working to make it more greener ✌️</p>
+					<p className="text-right text-neutral-400 mt-3 text-sm">Working to make it more greener ✌️</p>
 				</div>
 			</div>
 		</div>

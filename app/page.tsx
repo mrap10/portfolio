@@ -1,8 +1,9 @@
-import About from "./components/About";
-import GithubStats from "./components/GithubStats";
-import Hero from "./components/Hero";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
+import About from "./(sections)/About";
+import Footer from "./(sections)/Footer";
+import GithubStats from "./(sections)/GithubStats";
+import Hero from "./(sections)/Hero";
+import Projects from "./(sections)/Projects";
+import Skills from "./(sections)/Skills";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <GithubStats />
       <Projects />
       <Skills />
+      <Footer />
     </div>
   );
 }

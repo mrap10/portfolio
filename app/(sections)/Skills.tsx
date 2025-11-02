@@ -1,6 +1,11 @@
+"use client";
+
 import SkillsCard from "@/components/ui/skills-card";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export default function Skills() {
+    const { ref, isRevealed } = useScrollReveal();
+    
     const skillsData = [
         {
             category: "Frontend",
@@ -36,9 +41,11 @@ export default function Skills() {
 
     return (
         <div className="py-10 flex flex-col items-center justify-center px-4">
-            <h1 className="font-bold text-3xl mb-8">Skills & Technologies</h1>
+            <div ref={ref} className={`scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
+                <h1 className="font-bold text-3xl mb-8 text-center">Skills & Technologies</h1>
+            </div>
             
-            <div className="max-w-6xl w-full border border-neutral-700 rounded-lg p-8 bg-neutral-900/50 backdrop-blur-sm hover:border-neutral-600 transition-all duration-300">
+            <div className={`max-w-6xl w-full border border-neutral-700 rounded-lg p-8 bg-neutral-900/50 backdrop-blur-sm hover:border-neutral-600 transition-all duration-300 scroll-reveal ${isRevealed ? 'revealed' : ''}`} style={{ transitionDelay: '0.2s' }}>
                 <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
                     {skillsData.map((skillGroup) => (
                         <div 

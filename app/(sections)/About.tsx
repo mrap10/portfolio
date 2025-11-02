@@ -3,8 +3,11 @@
 import abhi from "@/public/pfp.gif";
 import ImagePortal from "@/components/ui/image-portal";
 import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export default function About() {
+    const { ref, isRevealed } = useScrollReveal();
+    
     const handleGithubClick = () => {
         window.open('https://github.com/mrap10', '_blank', 'noopener,noreferrer');
     };
@@ -19,7 +22,7 @@ export default function About() {
 
     return (
         <div id="about" className="min-h-screen bg-black text-white pt-20 px-4">
-            <div className="max-w-6xl mx-auto md:flex md:flex-col items-center justify-center space-y-7">
+            <div ref={ref} className={`max-w-6xl mx-auto md:flex md:flex-col items-center justify-center space-y-7 scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
                 <div className="md:flex gap-20">
                     <div className="flex items-center justify-center mb-16">
                         <ImagePortal 

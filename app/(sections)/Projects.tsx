@@ -1,7 +1,12 @@
+"use client";
+
 import ProjectsCard from "@/components/ui/projects-card"
 import { Keyboard, Building2, Star, Sparkles } from "lucide-react"
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export default function Projects() {
+    const { ref, isRevealed } = useScrollReveal();
+    
     const projectsData = [
         {
             title: "Touch Type Pro",
@@ -36,10 +41,12 @@ export default function Projects() {
     ]
 
     return (
-        <div id="projects" className="my-10 flex flex-col items-center justify-center">
-            <h1 className="text-3xl font-bold">Featured Projects</h1>
-            <p className="text-neutral-400">Some of my projects that showcase my skills and expertise in web development.</p>
-            <div className="grid md:grid-cols-2 gap-8 mt-8">
+        <div id="projects" className="my-10 pt-5 flex flex-col items-center justify-center">
+            <div ref={ref} className={`scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
+                <h1 className="text-3xl font-bold text-center">Featured Projects</h1>
+                <p className="text-neutral-400 text-center">Some of my projects that showcase my skills and expertise in web development.</p>
+            </div>
+            <div className={`grid md:grid-cols-2 gap-8 mt-8 scroll-reveal ${isRevealed ? 'revealed' : ''}`} style={{ transitionDelay: '0.2s' }}>
                 {projectsData.map((project) => (
                     <ProjectsCard 
                         key={project.title}
