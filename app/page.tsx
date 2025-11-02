@@ -4,6 +4,7 @@ import GithubStats from "./(sections)/GithubStats";
 import Hero from "./(sections)/Hero";
 import Projects from "./(sections)/Projects";
 import Skills from "./(sections)/Skills";
+import MoveToTop from "@/components/ui/move-to-top";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Projects />
       <Skills />
       <Footer />
+      <MoveToTop />
     </div>
   );
 }

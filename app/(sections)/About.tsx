@@ -17,7 +17,7 @@ export default function About() {
     };
 
     const handlePortfolioClick = () => {
-        window.open('https://touchtypepro.vercel.app/', '_blank', 'noopener,noreferrer');
+        window.open('https://devabhinaya.vercel.app/', '_blank', 'noopener,noreferrer');
     };
 
     return (
@@ -64,7 +64,7 @@ export default function About() {
                                     onClick={handlePortfolioClick}
                                     className="flex items-center gap-2 hover:underline cursor-pointer hover:text-blue-400 transition-colors duration-300"
                                 >
-                                    abhi.codes <ArrowUpRight className="text-blue-500 w-4 h-4" />
+                                    abhii.me <ArrowUpRight className="text-blue-500 w-4 h-4" />
                                 </p>
                                 <div className="flex justify-between items-center gap-5">
                                     <button 

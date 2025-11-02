@@ -38,7 +38,7 @@ export default function GithubStats() {
 		return <div className="text-red-400 text-center py-8">Error: {error}</div>;
 
 	return (
-		<div className="pt-10 px-4 bg-black text-white max-w-6xl mx-auto">
+		<div id="github-stats" className="pt-10 px-4 bg-black text-white max-w-6xl mx-auto">
 			<div className="flex flex-col items-center justify-center gap-5">
 				<h1 className="font-bold text-3xl">Github Contributions</h1>
 				<div className="border border-neutral-700 rounded-lg p-6 bg-neutral-900/50 backdrop-blur-sm">
