@@ -18,7 +18,7 @@ export default function About() {
     };
 
     return (
-        <div className="min-h-screen bg-black text-white pt-20 px-4">
+        <div id="about" className="min-h-screen bg-black text-white pt-20 px-4">
             <div className="max-w-6xl mx-auto md:flex md:flex-col items-center justify-center space-y-7">
                 <div className="md:flex gap-20">
                     <div className="flex items-center justify-center mb-16">

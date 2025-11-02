@@ -36,7 +36,7 @@ export default function Projects() {
     ]
 
     return (
-        <div className="my-10 flex flex-col items-center justify-center">
+        <div id="projects" className="my-10 flex flex-col items-center justify-center">
             <h1 className="text-3xl font-bold">Featured Projects</h1>
             <p className="text-neutral-400">Some of my projects that showcase my skills and expertise in web development.</p>
             <div className="grid md:grid-cols-2 gap-8 mt-8">
