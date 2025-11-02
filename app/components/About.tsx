@@ -1,3 +1,5 @@
+"use client";
+
 import abhi from "@/public/pfp.gif";
 import ImagePortal from "@/components/ui/image-portal";
 import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";

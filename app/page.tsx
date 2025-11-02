@@ -1,4 +1,5 @@
 import About from "./components/About";
+import GithubStats from "./components/GithubStats";
 import Hero from "./components/Hero";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <div className="min-h-screen font-sans">
       <Hero />
       <About />
+      <GithubStats />
     </div>
   );
 }
