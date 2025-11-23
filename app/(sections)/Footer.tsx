@@ -6,62 +6,20 @@ export default function Footer() {
     const { ref, isRevealed } = useScrollReveal();
     
     return (
-        <footer className="bg-black text-white pt-8">
+        <footer className="bg-black text-white">
             <div ref={ref} className={`max-w-6xl mx-auto px-4 text-center scroll-reveal space-y-6 ${isRevealed ? 'revealed' : ''}`}>
                 <div className="flex flex-col gap-5">
-                    <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-600">
-                        Fun Facts About Me
-                    </h1>
-                    <p className="text-neutral-400 max-w-2xl mx-auto">
-                        (Because who doesn't love random trivia?)
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mt-8">
-                        <div className="border border-neutral-700 rounded-lg p-6 bg-neutral-900/50 backdrop-blur-sm hover:border-neutral-600 transition-all duration-300 hover:shadow-[0_0_20px_rgba(6,182,212,0.2)]">
-                            <h3 className="font-semibold text-xl mb-4 text-cyan-400">Hobbies</h3>
-                            <ul className="text-left space-y-2 text-neutral-300">
-                                <li className="flex items-start gap-2">
-                                    <span className="inline-block w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></span>
-                                    <span>Love exploring UI design & animations</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="inline-block w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></span>
-                                    <span>Binge-watching sci-fi movies & shows</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="inline-block w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></span>
-                                    <span>Losing track of time customizing terminal themes</span>
-                                </li>
-                            </ul>
+                    <div className="flex flex-col gap-8 max-w-5xl mx-auto mt-8">
+                        <div>
+                            <h3 className="font-semibold mb-4 text-xl text-gray-200">Languages I speak: </h3>
+                            <p className="text-neutral-400 text-base"> English (Professional), Nepali (Native), Hindi (Conversational), German (Learning)</p>
                         </div>
 
-                        <div className="border border-neutral-700 rounded-lg p-6 bg-neutral-900/50 backdrop-blur-sm hover:border-neutral-600 transition-all duration-300 hover:shadow-[0_0_20px_rgba(168,85,247,0.2)]">
-                            <h3 className="font-semibold text-xl mb-4 text-purple-400">Languages I Speak</h3>
-                            <ul className="text-left space-y-2 text-neutral-300">
-                                <li className="flex items-start gap-2">
-                                    <span className="inline-block w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></span>
-                                    <span>English (Fluent)</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="inline-block w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></span>
-                                    <span>Nepali (Native)</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="inline-block w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></span>
-                                    <span>Hindi (Conversational)</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="inline-block w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></span>
-                                    <span>Spanish & German (Learning... slowly 😅)</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div className="border border-neutral-700 rounded-lg p-6 bg-neutral-900/50 backdrop-blur-sm hover:border-neutral-600 transition-all duration-300 hover:shadow-[0_0_20px_rgba(245,158,11,0.2)]">
-                            <h3 className="font-semibold text-xl mb-4 text-amber-400">Achievements</h3>
-                            <div className="text-left text-neutral-300">
-                                <p className="mb-2 font-medium text-amber-300">IEEE Research Paper Published!</p>
-                                <p className="text-sm text-neutral-400 mb-3">
-                                    Comparative Study of Code Generation by AI Models
+                        <div>
+                            <h3 className="font-semibold text-xl mb-4 text-gray-200">Publications:</h3>
+                            <div className="flex justify-between items-center text-left text-neutral-300">
+                                <p className="text-sm text-neutral-400 mr-3">
+                                    Comparative Study of Code Generation by AI Models (IEEE Xplore, 2025)
                                 </p>
                                 <a 
                                     href="https://ieeexplore.ieee.org/document/11052899" 
@@ -76,9 +34,14 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="border-t p-5 border-neutral-800">
-                    <h2 className="text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-                        Let's Connect
-                    </h2>
+                    <div className="flex justify-center items-center">
+                        <h2 className="text-2xl font-bold mb-4 bg-clip-text text-white">
+                            Let's Connect
+                        </h2>
+                        <div className="inline-block border-2 border-green-600 bg-emerald-400/30 ml-10 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                            Open to work
+                        </div>
+                    </div>
                     <p className="text-neutral-400 mb-4 max-w-3xl mx-auto">
                         I am currently looking for real-world opportunities. Feel free to reach out for collaborations or just a friendly chat! My inbox is always open.
                     </p>

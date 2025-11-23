@@ -36,8 +36,8 @@ export default function About() {
                         <h2 className="pl-5 text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
                             About Me
                         </h2>
-                        <p className="text-lg text-neutral-300 max-w-3xl mx-auto leading-relaxed">
-                            Full-stack developer with a knack for crafting clean, efficient, and user-focused web applications. Skilled in React, Next.js, Express, and PostgreSQL, I enjoy building seamless digital experiences from frontend to backend. Passionate about modern technologies, continuous learning, and delivering impactful solutions that make a real difference.
+                        <p className="text-lg text-justify text-neutral-300 max-w-3xl mx-auto leading-relaxed">
+                            Full-stack developer with a knack for crafting clean, efficient, and user-focused web applications. Skilled in React, Next.js, Express, PostgreSQL and more modern web frameworks. Passionate about modern technologies, continuous learning, and delivering impactful solutions that make a real difference.
                         </p>
                     </div>
                 </div>

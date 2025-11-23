@@ -1,7 +1,7 @@
 "use client";
 
 import ProjectsCard from "@/components/ui/projects-card"
-import { Keyboard, Building2, Star, Sparkles } from "lucide-react"
+import { Keyboard, Building2, Sparkles, Braces } from "lucide-react"
 import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export default function Projects() {
@@ -24,11 +24,12 @@ export default function Projects() {
             icon: <Building2 className="w-6 h-6" />,
             glowColor: 'amber' as const
         }, {
-            title: "Store Ratings Management System",
-            description: "A full stack  role-based web application that allows users to rate and review stores, providing valuable feedback for both store owners and customers along with admin controls.",
-            projectUrl: "https://github.com/mrap10/store-rating-management-system",
-            languages: ["React.js", "Typescript", "Express.js", "Prisma", "PostgreSQL", "Zustand", "Tailwind CSS"],
-            icon: <Star className="w-6 h-6" />,
+            title: "Create-Express-Preset",
+            description: "A production-ready CLI tool for scaffolding modern Express.js applications with TypeScript, Prisma ORM, JWT authentication, and modular addons.",
+            projectUrl: "https://github.com/mrap10/create-express-preset",
+            liveUrl: "https://www.npmjs.com/package/create-express-preset",
+            languages: ["Typescript", "Express.js", "Prisma", "PostgreSQL", "Zod", "Swagger", "Jest", "Resend"],
+            icon: <Braces className="w-6 h-6" />,
             glowColor: 'cyan' as const
         }, {
             title: "Netflix-GPT",
@@ -44,7 +45,7 @@ export default function Projects() {
         <div id="projects" className="my-10 pt-5 flex flex-col items-center justify-center">
             <div ref={ref} className={`scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
                 <h1 className="text-3xl font-bold text-center">Featured Projects</h1>
-                <p className="text-neutral-400 text-center">Some of my projects that showcase my skills and expertise in web development.</p>
+                <p className="text-neutral-400 text-center sm:px-0 px-2">Some of my projects that showcase my skills and expertise in web development.</p>
             </div>
             <div className={`grid md:grid-cols-2 gap-8 mt-8 scroll-reveal ${isRevealed ? 'revealed' : ''}`} style={{ transitionDelay: '0.2s' }}>
                 {projectsData.map((project) => (

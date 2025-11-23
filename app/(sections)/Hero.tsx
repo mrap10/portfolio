@@ -41,12 +41,15 @@ export default function Hero() {
     return (
         <BackgroundLines className="relative flex items-center justify-center w-full min-h-screen flex-col px-4 bg-black">
             <div className="flex flex-col items-center justify-center flex-1">
-                <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-600 to-white text-3xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight animate-fade-in-up">
+                <h2 className="mb-4 md:mb-0 bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-600 to-white text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight animate-fade-in-up">
                     Hey, I'm Abhinaya. <br /> Full Stack Developer.
                 </h2>
-                <p className="max-w-xl mx-auto text-sm md:text-lg text-neutral-400 text-center animate-fade-in-up animation-delay-200">
-                    Turning ideas into elegant, functional code. One commit at a time.
+                <p className="max-w-xl mx-auto md:px-0 px-5 text-sm md:text-lg text-neutral-400 text-center animate-fade-in-up animation-delay-100">
+                    Crafting seamless web applications with Next.js, Express.js, React.js, and more.
                 </p>
+                {/* <p className="max-w-xl mx-auto text-sm md:text-lg text-neutral-400 text-center animate-fade-in-up animation-delay-200">
+                    Turning ideas into elegant, functional code. One commit at a time.
+                </p> */}
 
                 <div className="mt-10 flex items-center justify-center space-x-10 animate-fade-in-up animation-delay-400">
                     <HoverBorderGradient
