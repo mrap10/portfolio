@@ -10,7 +10,7 @@ interface ProjectsCardProps {
     languages: string[];
     icon?: React.ReactNode;
     liveUrl?: string;
-    glowColor?: 'emerald' | 'amber' | 'cyan' | 'red';
+    glowColor?: 'emerald' | 'amber' | 'cyan' | 'red' | 'violet';
 }
 
 const colorThemes = {
@@ -53,7 +53,17 @@ const colorThemes = {
         liveBg: 'from-red-600/20 to-rose-600/20 hover:from-red-600/40 hover:to-rose-600/40',
         liveBorder: 'hover:border-red-500',
         liveShadow: 'hover:shadow-[0_0_15px_rgba(239,68,68,0.4)]',
-    }
+    },
+    violet: {
+        shadow: 'hover:shadow-[0_0_30px_rgba(139,92,246,0.3)]',
+        gradient: 'from-violet-500/10 via-transparent to-purple-500/10',
+        titleHover: 'group-hover:text-violet-400',
+        iconHover: 'group-hover:text-violet-400',
+        languageBorder: 'hover:border-violet-500 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)]',
+        liveBg: 'from-violet-600/20 to-purple-600/20 hover:from-violet-600/40 hover:to-purple-600/40',
+        liveBorder: 'hover:border-violet-500',
+        liveShadow: 'hover:shadow-[0_0_15px_rgba(139,92,246,0.4)]',
+    },
 };
 
 export default function ProjectsCard({ title, description, imageUrl, projectUrl, languages, icon, liveUrl, glowColor = 'cyan' }: ProjectsCardProps) {

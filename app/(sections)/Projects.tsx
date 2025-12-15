@@ -1,7 +1,7 @@
 "use client";
 
 import ProjectsCard from "@/components/ui/projects-card"
-import { Keyboard, Building2, Sparkles, Braces } from "lucide-react"
+import { Keyboard, Building2, Sparkles, Braces, IndianRupee, Star } from "lucide-react"
 import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export default function Projects() {
@@ -16,6 +16,13 @@ export default function Projects() {
             languages: ["Next.js", "Typescript", "Prisma", "PostgreSQL", "Socket.io", "Docker", "Tailwind CSS"],
             icon: <Keyboard className="w-6 h-6" />,
             glowColor: 'emerald' as const
+        }, {
+            title: "Tazapay Wallet App",
+            description: "A turbo repo based monorepo project for a digital wallet application with user, merchant apps and bank webhook simulations",
+            projectUrl: "https://github.com/mrap10/tazapay",
+            languages: ["Next.js", "Typescript", "Turborepo", "Prisma", "PostgreSQL", "NextAuth", "Recoil", "Tailwind CSS"],
+            icon: <IndianRupee className="w-6 h-6" />,
+            glowColor: 'violet' as const
         }, {
             title: "Hostel Management System",
             description: "A full stack project for Wardens and Students to manage hostel related operations like handling complaints, leaves, issuing notices, student management and more",
@@ -38,13 +45,20 @@ export default function Projects() {
             languages: ["React.js", "Firebase", "Gemini API", "React redux", "Tailwind CSS"],
             icon: <Sparkles className="w-6 h-6" />,
             glowColor: 'red' as const
+        }, {
+            title: "Store Ratings Management System",
+            description: "A full stack  role-based web application that allows users to rate and review stores, providing valuable feedback for both store owners and customers along with admin controls.",
+            projectUrl: "https://github.com/mrap10/store-rating-management-system",
+            languages: ["React.js", "Typescript", "Express.js", "Prisma", "PostgreSQL", "Zustand", "Tailwind CSS"],
+            icon: <Star className="w-6 h-6" />,
+            glowColor: 'cyan' as const
         }
     ]
 
     return (
         <div id="projects" className="my-10 pt-5 flex flex-col items-center justify-center">
             <div ref={ref} className={`scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
-                <h1 className="text-3xl font-bold text-center">Featured Projects</h1>
+                <h1 className="text-3xl font-bold text-center text-gray-200 mb-1">Featured Projects</h1>
                 <p className="text-neutral-400 text-center sm:px-0 px-2">Some of my projects that showcase my skills and expertise in web development.</p>
             </div>
             <div className={`grid md:grid-cols-2 gap-8 mt-8 scroll-reveal ${isRevealed ? 'revealed' : ''}`} style={{ transitionDelay: '0.2s' }}>

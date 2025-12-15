@@ -35,11 +35,11 @@ export default function Footer() {
                 </div>
                 <div className="border-t p-5 border-neutral-800">
                     <div className="flex justify-center items-center">
-                        <h2 className="text-2xl font-bold mb-4 bg-clip-text text-white">
+                        <h2 className="text-2xl font-bold mb-4 bg-clip-text text-gray-200">
                             Let's Connect
                         </h2>
                         <div className="inline-block border-2 border-green-600 bg-emerald-400/30 ml-10 px-3 py-1 rounded-full text-sm font-medium mb-4">
-                            Open to work
+                            <span className="inline-block w-3 h-3 rounded-full bg-green-600 mr-2"></span> Open to work
                         </div>
                     </div>
                     <p className="text-neutral-400 mb-4 max-w-3xl mx-auto">
