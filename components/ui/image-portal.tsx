@@ -160,6 +160,7 @@ const ImagePortal: React.FC<ImagePortalProps> = ({
           width={imageSize}
           height={imageSize}
           className="rounded-full object-cover border-4 border-white/20 shadow-[0_0_30px_rgba(0,255,0,0.3)]"
+          unoptimized
         />
       </div>
     </div>

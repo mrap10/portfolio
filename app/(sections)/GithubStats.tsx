@@ -57,7 +57,6 @@ export default function GithubStats() {
 						fontSize={14}
 						colorScheme="dark"
 					/>
-					<p className="text-right text-neutral-400 mt-3 text-sm">Working to make it more greener ✌️</p>
 				</div>
 			</div>
 		</div>
