@@ -42,7 +42,7 @@ export default function GithubStats() {
 			<div className="flex flex-col items-center justify-center gap-5">
 				<h1 className="font-bold text-3xl text-gray-200">Github Contributions</h1>
 				<div className="border border-neutral-700 rounded-lg p-6 bg-neutral-900/50 backdrop-blur-sm">
-					<ActivityCalendar
+					{data.length > 0 && <ActivityCalendar
 						data={data}
 						theme={{
 							light: ["#ebedf0", "#c6e48b", "#7bc96f", "#239a3b", "#196127"],
@@ -56,7 +56,7 @@ export default function GithubStats() {
 						blockSize={12}
 						fontSize={14}
 						colorScheme="dark"
-					/>
+					/>}
 				</div>
 			</div>
 		</div>

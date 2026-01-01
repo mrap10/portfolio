@@ -72,7 +72,7 @@ export default function Footer() {
                         </a>
                     </div>
                     <p className="text-neutral-500 text-sm">
-                        © 2025 Abhinaya Panthi. All rights reserved.
+                        © {new Date().getFullYear()} Abhinaya Panthi. All rights reserved.
                     </p>
                 </div>
             </div>
