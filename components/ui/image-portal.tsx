@@ -6,13 +6,11 @@ import Image, { StaticImageData } from "next/image";
 interface ImagePortalProps {
   imageSrc: string | StaticImageData;
   alt: string;
-  imageSize?: number;
 }
 
 const ImagePortal: React.FC<ImagePortalProps> = ({
   imageSrc,
   alt,
-  imageSize = 180,
 }) => {
   return (
     <div className="portal-container">
@@ -62,8 +60,8 @@ const ImagePortal: React.FC<ImagePortalProps> = ({
         /* Desktop and up (lg: 1024px) */
         @media (min-width: 1024px) {
           .portal-container {
-            width: 30vmin;
-            height: 30vmin;
+            width: 40vmin;
+            height: 40vmin;
             max-width: 250px;
             max-height: 250px;
           }
@@ -147,18 +145,18 @@ const ImagePortal: React.FC<ImagePortalProps> = ({
         }
       `}</style>
 
-      <div className="portal-ring"></div>
-      <div className="portal-ring"></div>
-      <div className="portal-ring"></div>
-      <div className="portal-ring"></div>
-      <div className="portal-ring"></div>
+      <div className="portal-ring opacity-50"></div>
+      <div className="portal-ring opacity-50"></div>
+      <div className="portal-ring opacity-50"></div>
+      <div className="portal-ring opacity-50"></div>
+      <div className="portal-ring opacity-50"></div>
 
       <div className="portal-image-wrapper">
         <Image
           src={imageSrc}
           alt={alt}
-          width={imageSize}
-          height={imageSize}
+          width={600}
+          height={600}
           className="rounded-full object-cover border-4 border-white/20 shadow-[0_0_30px_rgba(0,255,0,0.3)]"
           unoptimized
         />

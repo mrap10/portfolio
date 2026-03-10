@@ -15,7 +15,7 @@ export default function Footer() {
                             <p className="text-neutral-400 text-base"> English (Professional), Nepali (Native), Hindi (Conversational), German (Learning)</p>
                         </div>
 
-                        <div>
+                        {/* <div>
                             <h3 className="font-semibold text-xl mb-4 text-gray-200">Publications:</h3>
                             <div className="flex justify-between items-center text-left text-neutral-300">
                                 <p className="text-sm text-neutral-400 mr-3">
@@ -30,7 +30,7 @@ export default function Footer() {
                                     Read Paper →
                                 </a>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div className="border-t p-5 border-neutral-800">
@@ -38,8 +38,8 @@ export default function Footer() {
                         <h2 className="text-2xl font-bold mb-4 bg-clip-text text-gray-200">
                             Let's Connect
                         </h2>
-                        <div className="inline-block border-2 border-green-600 bg-emerald-400/30 ml-10 px-3 py-1 rounded-full text-sm font-medium mb-4">
-                            <span className="inline-block w-3 h-3 rounded-full bg-green-600 mr-2"></span> Open to work
+                        <div className="inline-block border-2 border-green-600/65 bg-emerald-400/30 ml-10 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                            <span className="inline-block w-3 h-3 rounded-full bg-green-600 mr-2 animate-ping"></span> Open to work
                         </div>
                     </div>
                     <p className="text-neutral-400 mb-4 max-w-3xl mx-auto">
@@ -72,7 +72,7 @@ export default function Footer() {
                         </a>
                     </div>
                     <p className="text-neutral-500 text-sm">
-                        © {new Date().getFullYear()} Abhinaya Panthi. All rights reserved.
+                        © {new Date().getFullYear()} Abhinaya. All rights reserved.
                     </p>
                 </div>
             </div>
