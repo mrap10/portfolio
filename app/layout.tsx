@@ -16,8 +16,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Abhinaya Panthi",
+  title: "Abhinaya",
   description: "Personal portfolio of Abhinaya Panthi, a software developer and tech enthusiast.",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "Abhinaya",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
