@@ -10,7 +10,7 @@ interface ProjectsCardProps {
     languages: string[];
     icon?: React.ReactNode;
     liveUrl?: string;
-    glowColor?: 'emerald' | 'amber' | 'cyan' | 'red' | 'violet';
+    glowColor?: 'emerald' | 'amber' | 'cyan' | 'red' | 'violet' | 'indigo' | 'rose';
 }
 
 const colorThemes = {
@@ -64,6 +64,26 @@ const colorThemes = {
         liveBorder: 'hover:border-violet-500',
         liveShadow: 'hover:shadow-[0_0_15px_rgba(139,92,246,0.4)]',
     },
+    indigo: {
+        shadow: 'hover:shadow-[0_0_30px_rgba(99,102,241,0.3)]',
+        gradient: 'from-indigo-500/10 via-transparent to-blue-500/10',
+        titleHover: 'group-hover:text-indigo-400',
+        iconHover: 'group-hover:text-indigo-400',
+        languageBorder: 'hover:border-indigo-500 hover:shadow-[0_0_10px_rgba(99,102,241,0.5)]',
+        liveBg: 'from-indigo-600/20 to-blue-600/20 hover:from-indigo-600/40 hover:to-blue-600/40',
+        liveBorder: 'hover:border-indigo-500',
+        liveShadow: 'hover:shadow-[0_0_15px_rgba(99,102,241,0.4)]',
+    }, 
+    rose: {
+        shadow: 'hover:shadow-[0_0_30px_rgba(244,63,94,0.3)]',
+        gradient: 'from-rose-500/10 via-transparent to-pink-500/10',
+        titleHover: 'group-hover:text-rose-400',
+        iconHover: 'group-hover:text-rose-400',
+        languageBorder: 'hover:border-rose-500 hover:shadow-[0_0_10px_rgba(244,63,94,0.5)]',
+        liveBg: 'from-rose-600/20 to-pink-600/20 hover:from-rose-600/40 hover:to-pink-600/40',
+        liveBorder: 'hover:border-rose-500',
+        liveShadow: 'hover:shadow-[0_0_15px_rgba(244,63,94,0.4)]',
+    }
 };
 
 export default function ProjectsCard({ title, description, imageUrl, projectUrl, languages, icon, liveUrl, glowColor = 'cyan' }: ProjectsCardProps) {
@@ -81,7 +101,7 @@ export default function ProjectsCard({ title, description, imageUrl, projectUrl,
     return (
         <div className={`group flex flex-col border border-neutral-700 rounded-lg p-6 gap-4 max-w-md relative overflow-hidden transition-all duration-300 hover:border-neutral-500 ${theme.shadow} hover:-translate-y-1 bg-neutral-900/50 backdrop-blur-sm`}>
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                <div className={`absolute inset-0 bg-gradient-to-br ${theme.gradient} blur-xl`}></div>
+                <div className={`absolute inset-0 bg-linear-to-br ${theme.gradient} blur-xl`}></div>
             </div>
 
             <div className="relative z-10 flex flex-col gap-4">
@@ -113,14 +133,14 @@ export default function ProjectsCard({ title, description, imageUrl, projectUrl,
                     {liveUrl && (
                         <button 
                             onClick={handleLiveClick}
-                            className={`w-full p-2 flex justify-between items-center rounded-lg cursor-pointer border border-neutral-600 text-neutral-300 bg-gradient-to-r ${theme.liveBg} ${theme.liveBorder} hover:text-white ${theme.liveShadow} transition-all duration-300`}
+                            className={`w-full p-2 flex justify-between items-center rounded-lg cursor-pointer border border-neutral-600 text-neutral-300 bg-linear-to-r ${theme.liveBg} ${theme.liveBorder} hover:text-white ${theme.liveShadow} transition-all duration-300`}
                         >
                             Live site <ArrowRightIcon className="w-4 h-4" />
                         </button>
                     )}
                     <button 
                         onClick={handleSourceClick}
-                        className="w-full p-2 flex justify-between items-center rounded-lg cursor-pointer border border-neutral-600 text-neutral-300 bg-gradient-to-r from-purple-600/20 to-pink-600/20 hover:from-purple-600/40 hover:to-pink-600/40 hover:border-purple-500 hover:text-white hover:shadow-[0_0_15px_rgba(168,85,247,0.4)] transition-all duration-300"
+                        className="w-full p-2 flex justify-between items-center rounded-lg cursor-pointer border border-neutral-600 text-neutral-300 bg-linear-to-r from-purple-600/20 to-pink-600/20 hover:from-purple-600/40 hover:to-pink-600/40 hover:border-purple-500 hover:text-white hover:shadow-[0_0_15px_rgba(168,85,247,0.4)] transition-all duration-300"
                     >
                         View Source <ArrowRightIcon className="w-4 h-4" />
                     </button>

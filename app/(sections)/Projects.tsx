@@ -1,13 +1,26 @@
 "use client";
 
 import ProjectsCard from "@/components/ui/projects-card"
-import { Keyboard, Building2, Sparkles, Braces, IndianRupee, Star } from "lucide-react"
+import { Keyboard, Building2, Sparkles, IndianRupee, Star, Code2, Terminal, TreePine } from "lucide-react"
 import { useScrollReveal } from "../hooks/useScrollReveal";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+import { useState } from "react";
 
 export default function Projects() {
     const { ref, isRevealed } = useScrollReveal();
-    
+    const [showAll, setShowAll] = useState(false);
+
+
     const projectsData = [
+        {
+            title: "ReqRes",
+            description: "LeetCode-style challenges, but for Express.js. Build real APIs, implement auth flows, and get instant feedback.",
+            projectUrl: "https://github.com/mrap10/reqres",
+            liveUrl: "https://reqres.online",
+            languages: ["Typescript", "Next.js", "Express.js", "Prisma", "PostgreSQL", "Docker", "Redis", "BullMQ", "Sentry"],
+            icon: <Code2 className="w-6 h-6" />,
+            glowColor: "indigo" as const
+        },
         {
             title: "Touch Type Pro",
             description: "A web application to help users improve their typing speed and accuracy through interactive lessons and real-time feedback.",
@@ -36,8 +49,16 @@ export default function Projects() {
             projectUrl: "https://github.com/mrap10/create-express-preset",
             liveUrl: "https://www.npmjs.com/package/create-express-preset",
             languages: ["Typescript", "Express.js", "Prisma", "PostgreSQL", "Zod", "Swagger", "Jest", "Resend"],
-            icon: <Braces className="w-6 h-6" />,
+            icon: <Terminal className="w-6 h-6" />,
             glowColor: 'cyan' as const
+        }, {
+            title: "Git Naughty-or-Nice",
+            description: "A fun christmas app to check if your GitHub contributions this year were naughty or nice, whether you deserve coal or cookies!",
+            projectUrl: "https://github.com/mrap10/git-naughty-or-nice",
+            liveUrl: "https://gitkarma.vercel.app",
+            languages: ["Next.js", "Typescript",  "Tailwind CSS", "Github API", "Motion"],
+            icon: <TreePine className="w-6 h-6" />,
+            glowColor: 'rose' as const
         }, {
             title: "Netflix-GPT",
             description: "An AI-powered Netflix-like web application that allows user to browse through movie and tv-shows lists, view their details and also get AI-based personalized movie and TV show recommendations",
@@ -53,7 +74,7 @@ export default function Projects() {
             icon: <Star className="w-6 h-6" />,
             glowColor: 'cyan' as const
         }
-    ]
+    ];
 
     return (
         <div id="projects" className="my-10 pt-5 flex flex-col items-center justify-center">
@@ -62,7 +83,7 @@ export default function Projects() {
                 <p className="text-neutral-400 text-center sm:px-0 px-2">Some of my projects that showcase my skills and expertise in web development.</p>
             </div>
             <div className={`grid md:grid-cols-2 gap-8 mt-8 scroll-reveal ${isRevealed ? 'revealed' : ''}`} style={{ transitionDelay: '0.2s' }}>
-                {projectsData.map((project) => (
+                {projectsData.slice(0, showAll ? projectsData.length : 4).map((project) => (
                     <ProjectsCard 
                         key={project.title}
                         title={project.title}
@@ -74,6 +95,16 @@ export default function Projects() {
                         glowColor={project.glowColor}
                     />
                 ))}
+            </div>
+            <div className="mt-8">
+                <HoverBorderGradient
+                    containerClassName="rounded-full"
+                    as="button"
+                    className="bg-black text-white flex items-center space-x-2 cursor-pointer"
+                    onClick={() => setShowAll(!showAll)}
+                >
+                    {showAll ? 'Show Less' : 'View More Projects'}
+                </HoverBorderGradient>
             </div>
         </div>
     )
