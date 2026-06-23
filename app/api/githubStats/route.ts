@@ -2,8 +2,9 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   const today = new Date();
-  const year = today.getMonth() < 6 ? today.getFullYear() - 1 : today.getFullYear();
-  const fromDate = new Date(year, 6, 1); // July 1st
+  const fromDate = new Date(today);
+  fromDate.setFullYear(today.getFullYear() - 1);
+
   const username = "mrap10";
 
   const response = await fetch("https://api.github.com/graphql", {
@@ -42,13 +43,14 @@ export async function GET() {
   if (!response.ok || result.errors) {
     // console.error("GitHub API Error:", result.errors || response.statusText);
     return NextResponse.json(
-      { error: result.errors?.[0]?.message || "GitHub API Error" },
-      { status: 500 }
+      { error: result.errors?.[0]?.message },
+      { status: 500 },
     );
   }
 
   const weeks =
-    result.data?.user?.contributionsCollection?.contributionCalendar?.weeks || [];
+    result.data?.user?.contributionsCollection?.contributionCalendar?.weeks ||
+    [];
 
   // if (weeks.length === 0) {
   //   console.warn("No contribution data returned from GitHub");
@@ -67,7 +69,7 @@ export async function GET() {
         count: day.contributionCount,
         level,
       };
-    })
+    }),
   );
 
   return NextResponse.json(contributions);

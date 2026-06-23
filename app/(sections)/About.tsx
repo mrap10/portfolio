@@ -6,82 +6,97 @@ import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export default function About() {
-    const { ref, isRevealed } = useScrollReveal();
-    
-    const handleGithubClick = () => {
-        window.open('https://github.com/mrap10', '_blank', 'noopener,noreferrer');
-    };
+  const { ref, isRevealed } = useScrollReveal();
 
-    const handleLinkedinClick = () => {
-        window.open('https://www.linkedin.com/in/abhipanthi', '_blank', 'noopener,noreferrer');
-    };
+  const handleGithubClick = () => {
+    window.open("https://github.com/mrap10", "_blank", "noopener,noreferrer");
+  };
 
-    const handlePortfolioClick = () => {
-        window.open('https://devabhinaya.vercel.app/', '_blank', 'noopener,noreferrer');
-    };
+  const handleLinkedinClick = () => {
+    window.open(
+      "https://www.linkedin.com/in/abhipanthi",
+      "_blank",
+      "noopener,noreferrer",
+    );
+  };
 
-    return (
-        <div id="about" className="min-h-screen bg-black text-white pt-20 px-4">
-            <div ref={ref} className={`max-w-6xl mx-auto md:flex md:flex-col items-center justify-center space-y-7 scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
-                <div className="md:flex gap-20 mb-16 flex items-center justify-center">
-                    <ImagePortal 
-                        imageSrc={abhi}
-                        alt="Profile Image"
-                    />
+  const handlePortfolioClick = () => {
+    window.open(
+      "https://devabhinaya.vercel.app/",
+      "_blank",
+      "noopener,noreferrer",
+    );
+  };
 
-                    <div className="flex flex-col gap-3">
-                        <h2 className="text-4xl md:text-5xl font-bold text-neutral-200">
-                            About Me
-                        </h2>
-                        <p className="text-lg text-neutral-400 max-w-3xl mx-auto ">
-                            Full-stack developer with a knack for crafting clean, efficient, and user-focused web applications. Skilled in React, Next.js, Express, PostgreSQL and more modern web frameworks. Passionate about modern technologies, continuous learning, and delivering impactful solutions that make a real difference.
-                        </p>
-                    </div>
-                </div>
+  return (
+    <div id="about" className="min-h-screen bg-black text-white pt-20 px-4">
+      <div
+        ref={ref}
+        className={`max-w-6xl mx-auto md:flex md:flex-col items-center justify-center space-y-7 scroll-reveal ${isRevealed ? "revealed" : ""}`}>
+        <div className="md:flex gap-20 mb-16 flex items-center justify-center">
+          <ImagePortal imageSrc={abhi} alt="Profile Image" />
 
-                <div className="text-center">
-                    <div className="px-15 py-7 text-center text-neutral-300 border border-neutral-700 bg-neutral-900 hover:bg-neutral-800 rounded-lg max-w-4xl mx-auto">
-                        <div className="md:flex justify-around items-center gap-10">
-                            <div className="flex flex-col gap-3 items-center justify-center">
-                                <h1 className="text-3xl md:text-4xl font-bold text-center text-neutral-200">Education</h1>
-                                <p className="mt-3 font-semibold text-neutral-300">B.Tech Computer Science and Engineering</p>
-                                <p>Jain University, Bengaluru, Karnataka</p>
-                                <p className="text-neutral-400">Aug 2022 - Jul 2026</p>
-                                <p className="text-cyan-500">Current CGPA: 9.0</p>
-                            </div>
-                            <hr className="mt-5 border-neutral-700 md:hidden" />
-                            <div className="border-l border-neutral-700 h-52 hidden md:block" />
-                            <div className="flex flex-col gap-3 items-center justify-center">
-                                <h1 className="mt-4 text-3xl md:text-4xl font-bold text-center text-neutral-200">Contact</h1>
-                                <p className="text-neutral-300">Bangalore, India</p>
-                                <p className="flex items-center gap-2">
-                                    <Mail className="text-red-500 w-4 h-4" /> contact.abhii10@gmail.com
-                                </p>
-                                <p 
-                                    onClick={handlePortfolioClick}
-                                    className="flex items-center gap-2 hover:underline cursor-pointer hover:text-blue-400 transition-colors duration-300"
-                                >
-                                    abhii.me <ArrowUpRight className="text-blue-500 w-4 h-4" />
-                                </p>
-                                <div className="flex justify-between items-center gap-5">
-                                    <button 
-                                        onClick={handleGithubClick}
-                                        className="rounded-full border border-neutral-600 hover:border-white hover:bg-neutral-800 p-2 mt-2 flex items-center justify-center gap-2 cursor-pointer transition-all duration-300 hover:scale-110"
-                                    >
-                                        <Github className="w-5 h-5" />
-                                    </button>
-                                    <button 
-                                        onClick={handleLinkedinClick}
-                                        className="rounded-full border border-neutral-600 hover:border-blue-500 hover:bg-blue-500/10 p-2 mt-2 flex items-center justify-center gap-2 cursor-pointer transition-all duration-300 hover:scale-110"
-                                    >
-                                        <Linkedin className="w-5 h-5" />
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <div className="flex flex-col gap-3">
+            <h2 className="text-4xl md:text-5xl font-bold text-neutral-200">
+              About Me
+            </h2>
+            <p className="text-lg text-neutral-400 text-justify max-w-160 mx-auto ">
+              Frontend-focused full-stack developer with a love for clean UI and
+              purposeful micro-interactions ~ React, Next.js and Motion, backed
+              by Express and PostgreSQL when the stack calls for it. If
+              aesthetics and performance both matter to you, let's build
+              something great together.
+            </p>
+          </div>
         </div>
-    )
+
+        <div className="text-center">
+          <div className="px-15 py-7 text-center text-neutral-300 border border-neutral-700 bg-neutral-900 hover:bg-neutral-800 rounded-lg max-w-4xl mx-auto">
+            <div className="md:flex justify-around items-center gap-10">
+              <div className="flex flex-col gap-3 items-center justify-center">
+                <h1 className="text-3xl md:text-4xl font-bold text-center text-neutral-200">
+                  Education
+                </h1>
+                <p className="mt-3 font-semibold text-neutral-300">
+                  B.Tech Computer Science and Engineering
+                </p>
+                <p>Jain University, Bengaluru, Karnataka</p>
+                <p className="text-neutral-400">Aug 2022 - Jul 2026</p>
+                <p className="text-cyan-500">Current CGPA: 9.0</p>
+              </div>
+              <hr className="mt-5 border-neutral-700 md:hidden" />
+              <div className="border-l border-neutral-700 h-52 hidden md:block" />
+              <div className="flex flex-col gap-3 items-center justify-center">
+                <h1 className="mt-4 text-3xl md:text-4xl font-bold text-center text-neutral-200">
+                  Contact
+                </h1>
+                <p className="text-neutral-300">Bangalore, India</p>
+                <p className="flex items-center gap-2">
+                  <Mail className="text-red-500 w-4 h-4" />{" "}
+                  contact.abhii10@gmail.com
+                </p>
+                <p
+                  onClick={handlePortfolioClick}
+                  className="flex items-center gap-2 hover:underline cursor-pointer hover:text-blue-400 transition-colors duration-300">
+                  abhii.me <ArrowUpRight className="text-blue-500 w-4 h-4" />
+                </p>
+                <div className="flex justify-between items-center gap-5">
+                  <button
+                    onClick={handleGithubClick}
+                    className="rounded-full border border-neutral-600 hover:border-white hover:bg-neutral-800 p-2 mt-2 flex items-center justify-center gap-2 cursor-pointer transition-all duration-300 hover:scale-110">
+                    <Github className="w-5 h-5" />
+                  </button>
+                  <button
+                    onClick={handleLinkedinClick}
+                    className="rounded-full border border-neutral-600 hover:border-blue-500 hover:bg-blue-500/10 p-2 mt-2 flex items-center justify-center gap-2 cursor-pointer transition-all duration-300 hover:scale-110">
+                    <Linkedin className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
