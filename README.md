@@ -1,9 +1,11 @@
 # Personal Portfolio
 
 A modern, responsive developer portfolio built with **Next.js (App Router)**, **TypeScript**, **Tailwind CSS**, and **shadcn/ui**.  
-Showcasing Projects, Skills, and Personal Highlights — all in one sleek interface.
+Showcasing Projects, Skills, and Personal Highlights; all in one sleek interface.
 
-🔗 **See it live here:** [abhii.me](https://abhii.me/)
+🔗 **See it live here:** [v1.abhii.me](https://v1.abhii.me/)
+
+> It is very first iteration of my dev portfolio site. View the latest one at: [abhii.me](https://abhii.me)]
 
 ---
 
